@@ -2,11 +2,11 @@
 .columns{ border: 3px solid #FF0000;}*/
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?dif67f');
-  src:  url('../fonts/icomoon.eot?dif67f#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?dif67f') format('truetype'),
-    url('../fonts/icomoon.woff?dif67f') format('woff'),
-    url('../fonts/icomoon.svg?dif67f#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?gjv7cp');
+  src:  url('../fonts/icomoon.eot?gjv7cp#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?gjv7cp') format('truetype'),
+    url('../fonts/icomoon.woff?gjv7cp') format('woff'),
+    url('../fonts/icomoon.svg?gjv7cp#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,43 +26,48 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-warning:before {
+  content: "\e902";
+}
+.icon-alert:before {
+  content: "\e902";
+  color: red;
+  font-size: 6rem;
+}
+.icon-keyboard:before {
+  content: "\e955";
+}
+.icon-mobile:before {
+  content: "\e958";
+}
+.icon-user:before {
+  content: "\e971";
+}
+.icon-warning2:before {
+  content: "\ea07";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
 .icon-sign-out:before {
   content: "\e900";
 }
 .icon-dollar:before {
   content: "\e901";
-  color: #393939;
-  font-size: 1.2rem;
 }
 .icon-bill:before {
   content: "\e901";
-  color: #393939;
-  font-size: 1.2rem;
 }
 .icon-money:before {
   content: "\e901";
-  color: #393939;
-  font-size: 1.2rem;
 }
 .icon-stack:before {
   content: "\e901";
-  color: #393939;
-  font-size: 1.2rem;
 }
-.icon-keyboard:before {
-  content: "\e955";
-  color: #393939;
-  font-size: 1.2rem;
-}
-.icon-mobile:before {
-  content: "\e958";
-  color: #393939;
-  font-size: 1.2rem;
-}
-.icon-user:before {
-  content: "\e971";
-  color: #393939;
-  font-size: 1.2rem;
+
+i{
+  font-size: 1.3rem;
+  color: #2E2E2E;
 }
 
 *{
@@ -77,7 +82,7 @@ label{
   /*border: 1px solid #7B7B7B;*/
   border: 2px solid #5da423;
 	background-color: #2C304F;
-  margin-top: 50px;/*para serparar de arriba*/
+  /*margin-top: 50px;*/
  /* padding: 20px 15px;*/
   box-shadow: 8px 12px 20px 8px rgba(12, 32, 77, 0.4);
 	border-radius: 8px;
@@ -105,6 +110,10 @@ select, option{
 
 .enviar{
   font-size: 1rem;
+}
+
+.enviar i{
+  color: #FFFFFF;
 }
 
 input{
@@ -141,6 +150,11 @@ input{
 
 .mensaje{
   margin: 90px auto; 
+  font-size: 1.8rem;
+}
+
+.mensajew{
+  margin: 80px 10px auto; 
   font-size: 1.8rem;
 }
 

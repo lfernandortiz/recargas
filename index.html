@@ -12,14 +12,25 @@
     </head>
   <body>
     <div class="row align-center">
-      <div class="columns small-4 text-center" id="recarga-contenedor">
+      <div class="columns small-10 text-center" id="recarga-contenedor">
         <div id="spinner-container" class="row align-center" style="display: none">
           <div class="small-12 align-middle mensaje">Procesando...</div>
           <div class="loader">Loading...</div>
-        </div>         
+        </div>
+        <!-- mensaje error     -->
+        <div id="spinner-container" class="row align-center" style="display: block">
+          <div class="small-12 align-middle mensajew"><i class="icon-alert"></i></div>
+          <div class="columns small-12">
+            <h4>Operador Invalido</h4>
+            <h6>Verifique que el operador corresponda a ese n&uacute;mero.</h6>
+            <button class="button alert">Ok</button>
+        </div>
+        
+          
+        </div>      
         <form id="form">
           <img src="images/farmanortelogo.png" alt="">
-          <h5>Venta de Recarga a Celular</h5>
+          <h4>Venta de Recarga a Celular</h4>
           <div class="row collapse"> 
             <div class="small-12 columns">
               <div class="row collapse">
