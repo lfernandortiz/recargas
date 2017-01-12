@@ -12,8 +12,12 @@
   <body>
     <div class="row align-center">
       <div class="columns small-4 text-center" id="recarga-contenedor">
-         
+        <div id="spinner-container" class="row align-center" style="display: none">
+          <div class="small-12 align-middle mensaje">Procesando...</div>
+          <div class="loader">Loading...</div>
+        </div>         
         <form id="form">
+          <img src="images/farmanortelogo.png" alt="">
           <h5>Venta de Recarga a Celular</h5>
           <div class="row collapse"> 
             <div class="small-12 columns">
@@ -63,11 +67,10 @@
               </div>
             </div>
             <div class="columns small-12">
-                <button type="button" class="success button expanded align-spaced"><i class="icon-sign-out"></i>&nbsp;&nbsp;Enviar</button>
+                <button type="button" class="success button expanded align-spaced enviar"><i class="icon-sign-out"></i>&nbsp;&nbsp;Enviar</button>
             </div>
           </div> <!-- final del row del form -->
-        </form>
-            
+        </form>            
       </div>   <!-- end recarga-contenedor -->
     </div>
 
