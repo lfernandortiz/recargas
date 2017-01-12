@@ -28,6 +28,8 @@
 
 .icon-warning:before {
   content: "\e902";
+  color: #ffae00;
+  font-size: 6rem;
 }
 .icon-alert:before {
   content: "\e902";
@@ -48,6 +50,8 @@
 }
 .icon-checkmark:before {
   content: "\ea10";
+  color: #5da423;
+  font-size: 6rem;
 }
 .icon-sign-out:before {
   content: "\e900";
@@ -98,29 +102,13 @@ form{
 }
 select, option{
 	color: #000000;
+  font-size: 1.1rem!important;
 }
-#form img{
-  margin-bottom: 5px;
-  width: 15rem;
-}
-
-#valor-recarga{
-	/*text-align: right;*/
-}
-
-.enviar{
-  font-size: 1rem;
-}
-
-.enviar i{
-  color: #FFFFFF;
-}
-
 input{
   font-size: 1.5rem!important;
   text-align: center;
 }
-
+/**editando  los place holders**/
 ::-webkit-input-placeholder {
    font-size: 1rem;
 }
@@ -137,9 +125,28 @@ input{
    font-size: 1rem;
 }
 
+#form img{
+  margin-bottom: 5px;
+  width: 15rem;
+}
+
+#valor-recarga{
+  /*text-align: right;*/
+}
+
+.enviar{
+  font-size: 1rem;
+}
+
+.enviar i{
+  color: #FFFFFF;
+}
+
+
+
 /****SPINNER*******/
-#spinner-container{
-  background-color: rgba(44, 48, 79, 0.9);
+.spinner-container{
+  background-color: rgba(44, 48, 79, 0.95);
   position: absolute;
   top:0;
   width: 100%;
@@ -155,6 +162,10 @@ input{
 
 .mensajew{
   margin: 80px 10px auto; 
+  font-size: 1.8rem;
+}
+.mensaje-exito{
+  margin: 80px auto; 
   font-size: 1.8rem;
 }
 

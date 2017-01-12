@@ -13,21 +13,36 @@
   <body>
     <div class="row align-center">
       <div class="columns small-10 text-center" id="recarga-contenedor">
-        <div id="spinner-container" class="row align-center" style="display: none">
+        <div id="spinner" class="spinner-container row align-center" style="display: none;">
           <div class="small-12 align-middle mensaje">Procesando...</div>
           <div class="loader">Loading...</div>
         </div>
         <!-- mensaje error     -->
-        <div id="spinner-container" class="row align-center" style="display: block">
+        <div id="mensaje-error" class="spinner-container row align-center" style="display: none">
           <div class="small-12 align-middle mensajew"><i class="icon-alert"></i></div>
           <div class="columns small-12">
             <h4>Operador Invalido</h4>
             <h6>Verifique que el operador corresponda a ese n&uacute;mero.</h6>
             <button class="button alert">Ok</button>
+          </div>
         </div>
-        
-          
-        </div>      
+        <!-- mensaje alerta     -->
+        <div id="menasaje-alerta" class="spinner-container row align-center" style="display: none">
+          <div class="small-12 align-middle mensajew"><i class="icon-warning"></i></div>
+          <div class="columns small-12">
+            <h4>Otra opcion de fallas</h4>
+            <h6>Falla aun sin definir el mensaje.</h6>
+            <button class="button warning">Ok</button>
+          </div>
+        </div> 
+        <div id="menasaje-ok" class="spinner-container row align-center" style="display: none">
+          <div class="small-12 align-middle mensaje-exito"><i class="icon-checkmark"></i></div>
+          <div class="columns small-12">
+            <h4>Recarga Exitosa</h4>
+            <button class="button success">Regresar</button>
+          </div>
+        </div>  
+
         <form id="form">
           <img src="images/farmanortelogo.png" alt="">
           <h4>Venta de Recarga a Celular</h4>
