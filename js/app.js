@@ -1,4 +1,7 @@
+/** window open a 437x562 **/
 
+
+//Formato para el valor de la recarga
 (function($, undefined) {
 
 	"use strict";
