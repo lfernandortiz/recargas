@@ -69,33 +69,33 @@ i{
 }
 
 *{
-  color: #FFFFFF;
+	color: #FFFFFF;
 }
 
 label{
-  color: #FFFFFF; 
+	color: #FFFFFF;	
 }
 
 #recarga-contenedor{
   /*border: 1px solid #7B7B7B;*/
   border: 2px solid #5da423;
-  background-color: #2C304F;
+	background-color: #2C304F;
   /*margin-top: 50px;*/
  /* padding: 20px 15px;*/
   box-shadow: 8px 12px 20px 8px rgba(12, 32, 77, 0.4);
-  border-radius: 8px;
-  z-index: 2;
+	border-radius: 8px;
+	z-index: 2;
   position: relative;
 }
 
 form{
-  padding: 15px 10px;
+	padding: 15px 10px;
 }
 .input-group-label{
-  padding: 0 .5rem!important;
+	padding: 0 .5rem!important;
 }
 select, option{
-  color: #000000;
+	color: #000000;
   font-size: 1.1rem!important;
 }
 input{
