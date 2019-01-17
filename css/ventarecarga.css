@@ -1,12 +1,45 @@
 /*.row{ border: 1px solid #0FBCF5; }
 .columns{ border: 2px solid #FF0000;}*/
+/*********************************/
+@font-face {
+  font-family: 'icomoona';
+  src:  url('../fonts/icomoona.eot?x4ks7b');
+  src:  url('../fonts/icomoona.eot?x4ks7b#iefix') format('embedded-opentype'),
+    url('../fonts/icomoona.ttf?x4ks7b') format('truetype'),
+    url('../fonts/icomoona.woff?x4ks7b') format('woff'),
+    url('../fonts/icomoona.svg?x4ks7b#icomoona') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icona-"], [class*=" icona-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoona' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icona-directv:before {
+  content: "\e900";
+}
+
+/*********************************/
+
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?gjv7cp');
-  src:  url('../fonts/icomoon.eot?gjv7cp#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?gjv7cp') format('truetype'),
-    url('../fonts/icomoon.woff?gjv7cp') format('woff'),
-    url('../fonts/icomoon.svg?gjv7cp#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?o8atl0');
+  src:  url('../fonts/icomoon.eot?o8atl0#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?o8atl0') format('truetype'),
+    url('../fonts/icomoon.woff?o8atl0') format('woff'),
+    url('../fonts/icomoon.svg?o8atl0#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +59,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-disconnected:before {
+  content: "\e903";
+}
 .icon-warning:before {
   content: "\e902";
 }
@@ -41,11 +77,17 @@
 .icon-user:before {
   content: "\e971";
 }
+.icon-key:before {
+  content: "\e98d";
+}
 .icon-warning2:before {
   content: "\ea07";
 }
 .icon-checkmark:before {
   content: "\ea10";
+}
+.icon-chain-broken:before {
+  content: "\e904";
 }
 .icon-sign-out:before {
   content: "\e900";
@@ -69,33 +111,43 @@ i{
 }
 
 *{
-	color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 label{
-	color: #FFFFFF;	
+  color: #FFFFFF; 
 }
 
 #recarga-contenedor{
   /*border: 1px solid #7B7B7B;*/
   border: 2px solid #5da423;
-	background-color: #2C304F;
+  background-color: #2C304F;
   margin-top: 30px;
  /* padding: 20px 15px;*/
   box-shadow: 8px 12px 20px 8px rgba(12, 32, 77, 0.4);
-	border-radius: 8px;
-	z-index: 2;
+  border-radius: 8px;
+  z-index: 2;
   position: relative;
 }
 
 form{
-	padding: 15px 10px;
+  padding: 15px 10px;
 }
+
+.blur{  
+  -webkit-filter: blur(6px); transition: 0.2s;  
+}
+
+.nonBlur{
+  -webkit-filter: blur(0px); transition: 0.2s;  
+}
+
 .input-group-label{
-	padding: 0 .5rem!important;
+  padding: 0 .5rem!important;
+  min-width: 3rem!important;
 }
 select, option{
-	color: #000000;
+  color: #000000;
   font-size: 1.1rem!important;
 }
 input{
@@ -150,21 +202,26 @@ input{
   padding: 6rem 0 1rem;
 }
 
+.iconocallout-dis{
+  min-height: 40%;
+  padding: 6rem 0 0rem;
+}
+
 .mensajecallout{
   min-height: 60%;
 }
 
 .spinner,
+.container-bienvenida,
 .error-mensaje,
 .alerta-mensaje,
 .mesaje-ok{
   display: none;  
 }
 
-
 .active{
   display: block;
-  transition: 1s;
+  transition: 1.5s;
 }
 
 #mensaje-error i{
@@ -182,6 +239,16 @@ input{
   font-size: 6rem;
 }
 
+#error-sistema i{
+  color: red;
+  font-size: 6rem;
+}
+
+i.icon-disconnected{
+  font-size: 15rem;
+  color: #ffae00;
+}
+
 .input-group-label-error {
   text-align: center;
   padding: 0 1rem;
@@ -196,6 +263,20 @@ input{
   border-color: #c60f13!important;
 }
 
+.is-invalid-input-warning:not(:focus) {
+  background-color: rgba(228, 205, 101, 0.4)!important;
+  color: #FFF!important;
+  border-color: #E4CD65!important;
+}
+
+.is-invalid-label-warning {
+  color: #CA8500; }
+
+#error-sinpin,
+#error-sinpin i{
+  color: #E4CD65;
+}
+
 .fondoContenedor{
   background: #D2D2D2;
 }
@@ -207,14 +288,30 @@ input{
 
 
 /****SPINNER*******/
+/*Este contenedor es usado por todos los callout*/
 .spinner-container{
-  background-color: rgba(44, 48, 79, 0.95);
+  background-color: rgba(44, 48, 79, 0.90);
   position: absolute;
   top:0;
   width: 100%;
   height: 100%;
   border-radius: 8px;
   z-index: 99; 
+}
+
+.container-bienvenida{
+  background-color: #000A7B;
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  z-index: 99; 
+}
+
+.imgInicio{
+  margin-top: 12rem;
+  width: 18rem;
 }
 
 #spinner .iconocallout{
@@ -269,6 +366,14 @@ input{
   margin-bottom: .5em;
   font-size: .45em;
 }
+
+.copy a{
+  text-decoration: none;
+}
+.copy a:visited{
+  color: #FFF;
+}
+
 
 @-webkit-keyframes load1 {
   0%,

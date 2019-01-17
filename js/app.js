@@ -69,9 +69,9 @@ var pinRecarga;			//codigo personal del vendedor para recargas
 var vendedoresList; // coleccion de todos los vendedores con su pin de recarga
 
 
-var operadoresService = "wsjson/operadores/";
-var mensajerossService = "wsjson/vendedores/";
-var recarcaService = "recargasservice.php?";
+var operadoresService = "http://dromedicas.sytes.net:8082/dropos/wsjson/operadores/";
+var mensajerossService = "http://dromedicas.sytes.net:8082/dropos/wsjson/vendedores/";
+var recarcaService = "http://dromedicas.sytes.net:8082/dropos/recargasservice.php?";
 
 var valorValido = true, numeroValido = true, vendedorValido = true, pinValido = true;
 var activeSession = false;
@@ -97,7 +97,7 @@ function validacion() {
         "background-color: #FFFFFF; color: #008ce2");
     var urlLocal = recarcaService;
     urlLocal += "opcion=obtenersesion"
-    $.ajax({
+    /*$.ajax({
             url: urlLocal,
         })
         .done(function(res) {
@@ -112,7 +112,7 @@ function validacion() {
             btnError.addEventListener("click", function(e) {
                 window.close();
             }, false);
-        });
+        });*/
 }
 //valida que la sesion este activa mientras la pagina este abierta
 function validacionInterval() {
@@ -585,8 +585,8 @@ function normalizarEstilos() {
 
 //utilidad para mostrar un callout de error en los servicios
 function mostrarFallaDelSistema(mensaje) {
-		document.getElementById("form").classList.remove("nonBlur");
-		document.getElementById("form").classList.add("blur");
+	document.getElementById("form").classList.remove("nonBlur");
+	document.getElementById("form").classList.add("blur");
     var divError = document.getElementById("error-sistema");
     divError.classList.add("active");
     document.getElementById("mesaje-falla").innerHTML = mensaje;
