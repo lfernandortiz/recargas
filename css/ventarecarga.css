@@ -80,7 +80,7 @@ label{
   /*border: 1px solid #7B7B7B;*/
   border: 2px solid #5da423;
 	background-color: #2C304F;
-  /*margin-top: 50px;*/
+  margin-top: 30px;
  /* padding: 20px 15px;*/
   box-shadow: 8px 12px 20px 8px rgba(12, 32, 77, 0.4);
 	border-radius: 8px;
@@ -160,6 +160,7 @@ input{
 .mesaje-ok{
   display: none;  
 }
+
 
 .active{
   display: block;
